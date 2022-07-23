@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let mode = 'development'
 if (process.env.NODE_ENV === 'production') {
@@ -11,6 +12,11 @@ module.exports = {
   entry: {
     index: './src/js/index.js'
   },
+  output: {
+    filename: '[name].[contenthash].js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true
+  },
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
@@ -18,5 +24,15 @@ module.exports = {
     compress: true,
     port: 9000,
     open: true
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
+  ],
+  module: {
+    rules: [
+
+    ]
   }
 }
