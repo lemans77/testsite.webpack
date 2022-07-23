@@ -11,7 +11,8 @@ console.log(mode + ' mode')
 module.exports = {
   mode: mode,
   entry: {
-    index: './src/js/index.js'
+    index: './src/js/index.js',
+    script: './src/js/script.js'
   },
   output: {
     filename: '[name].[contenthash].js',
