@@ -28,7 +28,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.ejs',
+      filename: 'index.html',
+      title: 'Home Page'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
@@ -69,6 +71,12 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: 'html-loader',
+      },
+      {
+        test: /\.ejs$/i,
+        use: {
+          loader: 'ejs-compiled-loader'
+        }
       }
     ]
   }
