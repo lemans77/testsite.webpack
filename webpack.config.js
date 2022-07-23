@@ -19,6 +19,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
+  devtool: 'source-map',
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
