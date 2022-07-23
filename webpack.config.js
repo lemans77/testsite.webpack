@@ -101,6 +101,21 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: 'html-loader'
+          },
+          {
+            loader: 'pug-html-loader',
+            options: {
+              exports: false
+            }
+          }
+        ],
+        exclude: /(node_modules|bower_components)/,
       }
     ]
   }
