@@ -17,4 +17,6 @@ let faq = [
   }
 ];
 
-export { faq }
+let footerIcons = ['facebook', 'twitter', 'youtube', 'github', 'linkedin']
+
+export { faq, footerIcons }
