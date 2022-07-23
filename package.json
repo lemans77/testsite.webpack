@@ -17,6 +17,11 @@
   "bugs": {
     "url": "https://github.com/lemans77/testsite.webpack/issues"
   },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 10"
+  ],
   "homepage": "https://github.com/lemans77/testsite.webpack#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
